@@ -1,6 +1,13 @@
 <?php
 
-$texto_mail=$POST["comentario"];
+
+if($_POST["nombre"]=="" || $_POST["apellido"]=="" || $_POST["email"]=="" || $_POST["comentarios"]=="") {
+
+    echo "Hay campos requeridos. Revisalos"
+    die();
+}
+
+$texto_mail=$POST["comentarios"];
 
 $destinatario=$_POST["email"];
 
